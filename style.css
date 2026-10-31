@@ -1,0 +1,261 @@
+/* =========================================================
+   ZEE SPORTS — MAIN STYLESHEET
+   EASY CUSTOMIZATION GUIDE:
+   1) Change brand colours in :root below.
+   2) Change the HERO BACKGROUND IMAGE URL in .hero.
+   3) Replace category/product photos in index.html/script.js.
+   ========================================================= */
+
+:root {
+  --black: #0b0b0d;
+  --dark: #171719;
+  --red: #c8102e;
+  --white: #ffffff;
+  --silver: #c5c5c5;
+  --muted: #a6a6ad;
+  --line: #303035;
+  --container: 1200px;
+}
+
+/* Basic reset */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--line);
+  color: var(--white);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+.container { width: min(var(--container), calc(100% - 40px)); margin: 0 auto; }
+
+/* Reusable headings and buttons */
+.eyebrow { color: #ff526d; font-size: .74rem; font-weight: 800; letter-spacing: .18em; }
+.section { padding: 86px 0; }
+.section-dark { background: #121214; }
+.section-heading { margin-bottom: 34px; }
+.section-heading h2, .brand-cta h2 {
+  margin: 8px 0 10px;
+  font: 700 clamp(2rem, 4vw, 3.5rem)/1.08 "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.section-heading p:last-child { color: var(--muted); margin: 0; }
+.section-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 12px 20px; border: 1px solid transparent;
+  font-size: .76rem; font-weight: 800; letter-spacing: .06em;
+  text-transform: uppercase; transition: .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-red { background: var(--red); color: white; }
+.btn-red:hover { background: #fae100; }
+.btn-outline { border-color: #aaa; color: white; background: transparent; }
+.btn-outline:hover { background: var(--red); border-color: var(--red); }
+.btn-white { background: white; color: #111; }
+.full-width { width: 100%; }
+
+/* Header and navigation */
+.site-header {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(11,11,13,.96); border-bottom: 1px solid var(--line);
+}
+.nav-wrap { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; align-items: center; min-width: 145px; }
+.brand img { width: 150px; max-height: 58px; object-fit: contain; }
+.logo-fallback { display: none; font: 700 1.5rem "Oswald"; letter-spacing: .06em; }
+.logo-fallback b, .footer h2 span { color: var(--red); }
+.nav-links { display: flex; align-items: center; gap: 23px; }
+.nav-links a, .nav-cart, .whatsapp-small {
+  font-size: .72rem; font-weight: 800; letter-spacing: .05em;
+}
+.nav-links a:hover { color: #ff536d; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-cart { border: 1px solid var(--line); padding: 9px 12px; }
+.nav-cart span { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--red); margin-left: 5px; }
+.whatsapp-small { background: var(--red); padding: 10px 12px; }
+.menu-toggle { display: none; background: transparent; color: white; border: 1px solid var(--line); padding: 8px 11px; }
+
+/* HERO BACKGROUND IMAGE:
+   Replace this URL with your own image, e.g. url("images/hero-teamwear.jpg").
+   Recommended: wide landscape image, around 1920 x 900 pixels. */
+.hero {
+  min-height: 650px; position: relative; display: flex; align-items: center;
+  background: url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat;
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.68) 48%, rgba(0,0,0,.2)); }
+.hero-content { position: relative; z-index: 1; padding: 90px 0; }
+.hero h1 { margin: 18px 0; font: 700 clamp(3.2rem, 8vw, 6.8rem)/.94 "Oswald", sans-serif; }
+.hero h1 span { color: var(--red); }
+.hero-description { max-width: 590px; color: #ddd; font-size: 1.02rem; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* Category cards */
+.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.category-card { height: 310px; position: relative; overflow: hidden; background: var(--dark); }
+.category-card img { width: 100%; height: 100%; object-fit: cover; opacity: .78; transition: .35s; }
+.category-card:hover img { transform: scale(1.06); opacity: 1; }
+.category-caption { position: absolute; inset: auto 0 0; padding: 24px 18px 18px; background: linear-gradient(transparent, rgba(0,0,0,.95)); }
+.category-caption h3 { margin: 0; font: 600 1.4rem "Oswald"; }
+.category-caption span { color: #ddd; font-size: .8rem; }
+
+/* Feature cards */
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.feature-card { background: #1b1b1e; border: 1px solid var(--line); padding: 25px; }
+.feature-icon { color: #ff536d; font-size: 1.8rem; }
+.feature-card h3, .process-grid h3 { font: 600 1.18rem "Oswald"; margin: 12px 0 8px; }
+.feature-card p, .process-grid p { color: var(--muted); font-size: .86rem; margin: 0; }
+
+/* Product list and filter controls */
+.product-search input {
+  width: min(270px, 100%); padding: 12px 14px; color: white;
+  background: #19191c; border: 1px solid #444; outline: none;
+}
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.filter-button { background: transparent; border: 1px solid #555; color: white; padding: 9px 13px; font-size: .7rem; font-weight: 800; cursor: pointer; }
+.filter-button.active, .filter-button:hover { background: var(--red); border-color: var(--red); }
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.product-card { background: var(--dark); border: 1px solid var(--line); min-width: 0; }
+.product-card img { width: 100%; height: 250px; object-fit: cover; background: #252529; }
+.product-info { padding: 17px; }
+.product-tag { color: #ff6b80; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.product-info h3 { margin: 5px 0; font: 600 1.25rem "Oswald"; text-transform: uppercase; }
+.product-info p { color: var(--muted); min-height: 45px; font-size: .82rem; }
+.product-card .btn { width: 100%; }
+
+/* Manufacturing process */
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.process-grid article { background: #1b1b1e; padding: 20px; border-top: 2px solid var(--red); }
+.process-grid article b { color: var(--red); font: 700 2rem "Oswald"; }
+
+/* Private label call to action.
+   PHOTO REPLACEMENT: Change the background image URL below if desired. */
+.brand-cta {
+  padding: 78px 0;
+  background: linear-gradient(90deg, rgba(160,0,25,.94), rgba(30,0,6,.88)),
+    url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+.brand-cta h2 { max-width: 850px; }
+.brand-cta p { max-width: 650px; color: #f2dfe2; margin-bottom: 25px; }
+
+/* Contact section */
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.contact-card { padding: 28px; background: var(--dark); border: 1px solid var(--line); }
+.contact-card span { color: #ff536d; font-size: 1.7rem; }
+.contact-card h3 { font: 600 1.3rem "Oswald"; }
+.contact-card a { color: var(--silver); overflow-wrap: anywhere; }
+.contact-card a:hover { color: white; }
+
+/* Footer */
+.footer { background: #070708; border-top: 1px solid var(--line); padding: 38px 0; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer h2 { font: 700 1.8rem "Oswald"; margin: 0; }
+.footer p { color: var(--muted); font-size: .8rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: .82rem; }
+
+/* Inquiry cart drawer */
+.cart-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.65); z-index: 39; display: none; }
+.cart-backdrop.open { display: block; }
+.cart-drawer { position: fixed; z-index: 40; top: 0; right: 0; width: min(420px, 100%); height: 100vh; overflow-y: auto; padding: 25px; background: #151518; border-left: 1px solid #444; transform: translateX(105%); transition: .25s; }
+.cart-drawer.open { transform: translateX(0); }
+.cart-header { display: flex; justify-content: space-between; align-items: center; }
+.cart-header h2 { font: 700 1.8rem "Oswald"; }
+.cart-header button { background: transparent; color: white; border: 1px solid #555; padding: 8px 11px; }
+.cart-help { color: var(--muted); font-size: .85rem; }
+.cart-line { border-bottom: 1px solid #39393e; padding: 14px 0; }
+.cart-line strong { display: block; }
+.cart-line small { color: var(--muted); }
+.remove-item { background: transparent; color: #ff788b; border: 0; padding: 7px 0; cursor: pointer; }
+#sendWhatsApp { margin-top: 22px; }
+.toast { position: fixed; z-index: 60; bottom: 20px; left: 50%; transform: translate(-50%, 100px); background: white; color: #111; padding: 12px 18px; transition: .2s; }
+.toast.show { transform: translate(-50%, 0); }
+
+/* Tablet layout */
+@media (max-width: 950px) {
+  .nav-links { display: none; position: absolute; top: 78px; left: 0; right: 0; padding: 20px; background: #111; flex-direction: column; align-items: flex-start; border-bottom: 1px solid var(--line); }
+  .nav-links.open { display: flex; }
+  .menu-toggle { display: block; }
+  .category-grid, .product-grid, .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile layout */
+@media (max-width: 620px) {
+  .container { width: calc(100% - 28px); }
+  .nav-wrap { min-height: 70px; gap: 10px; }
+  .nav-links { top: 70px; }
+  .brand img { width: 120px; }
+  .nav-cart { font-size: .62rem; padding: 8px; }
+  .whatsapp-small { display: none; }
+  .hero { min-height: 570px; }
+  .hero-content { padding: 70px 0; }
+  .hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
+  .section { padding: 60px 0; }
+  .section-heading-row { display: block; }
+  .product-search { margin-top: 18px; }
+  .product-search input { width: 100%; }
+  .category-grid, .product-grid, .feature-grid, .contact-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .category-card { height: 230px; }
+  .category-caption { padding: 16px 12px; }
+  .category-caption h3 { font-size: 1.08rem; }
+  .category-caption span { font-size: .7rem; }
+  .product-card img { height: 180px; }
+  .product-info { padding: 12px; }
+  .product-info h3 { font-size: 1.05rem; }
+  .product-info p { font-size: .75rem; }
+  .product-info .btn { font-size: .62rem; padding: 10px 6px; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .contact-card { padding: 17px; }
+  .contact-card h3 { font-size: 1.05rem; }
+  .contact-card a { font-size: .75rem; }
+  .footer-content { display: block; }
+  .footer-links { margin: 18px 0; }
+}
+@media (max-width: 380px) {
+  .category-grid, .product-grid, .feature-grid, .contact-grid { grid-template-columns: 1fr; }
+}
+
+.footer-social {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-social h3 {
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #171719;
+    color: #FFFFFF;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #C8102E;
+    border-color: #C8102E;
+    transform: translateY(-4px);
+}

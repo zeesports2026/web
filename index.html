@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDIT: Change the page title and description for SEO. -->
+  <title>Zee Sports | Custom Sportswear Manufacturer</title>
+  <meta name="description" content="Custom sportswear and team uniform manufacturer in Sialkot, Pakistan.">
+
+  <!-- EDIT: Replace YOUR-DOMAIN.com with your real website domain before publishing. -->
+  <link rel="canonical" href="https://zeesportsinc.com/">
+
+  <!-- Google Fonts: Oswald for headings, Inter for body text. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet: keep style.css in the same folder as index.html. -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EDIT: Change the WhatsApp number in script.js too if your number changes. -->
+</head>
+<body>
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- ========================= HEADER / NAVIGATION ========================= -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Zee Sports home">
+        <!-- PHOTO/LOGO REPLACEMENT: Put your real logo at images/zee-sports-logo.png
+             and change the src below. Keep the image transparent if possible. -->
+        <img src="logo.png" alt="Zee Sports logo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <span class="logo-fallback">ZEE <b>SPORTS</b></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">HOME</a>
+        <a href="#services">SERVICES</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#process">MANUFACTURING</a>
+        <a href="https://drive.google.com/drive/folders/19wmS6Z-KHhKGgSRSrS5Mhh3a81Bh5mGb">View Cetalogs</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-cart" href="#products">INQUIRY BAG <span id="cartCount">0</span></a>
+        <a class="whatsapp-small" href="https://wa.me/923184040139" target="_blank" rel="noopener">WHATSAPP</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================= HERO SECTION ========================= -->
+    <section class="hero" id="home">
+      <!-- PHOTO REPLACEMENT: Replace the hero background URL in style.css.
+           Search for: HERO BACKGROUND IMAGE -->
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">CUSTOM SPORTSWEAR · SIALKOT, PAKISTAN</p>
+        <h1>YOUR GAME.<br><span>YOUR IDENTITY.</span><br>YOUR STYLE.</h1>
+        <p class="hero-description">
+          Premium custom sportswear and team uniform manufacturing for teams,
+          clubs, retailers, wholesalers and sportswear brands.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-red" href="#products">EXPLORE COLLECTION</a>
+          <a class="btn btn-outline" href="#contact">BECOME A PARTNER</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= COLLECTION CATEGORIES ========================= -->
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FIND YOUR CATEGORY</p>
+          <h2>SPORTSWEAR COLLECTIONS</h2>
+          <p>Explore custom uniforms and apparel for your team or brand.</p>
+        </div>
+
+        <div class="category-grid">
+          <!-- PHOTO REPLACEMENT: Change each image URL in the data-image attribute.
+               Use your own product photo URL or a local path such as images/football.jpg. -->
+          <a class="category-card" href="#products" data-category-link="Football">
+            <img src="Football.png" alt="Football and soccer uniforms" loading="lazy">
+            <div class="category-caption"><h3>FOOTBALL & SOCCER</h3><span>Custom Jerseys. Team Kits. Premium Sportswear.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Basketball">
+            <img src="Basketball.png" alt="Basketball uniforms" loading="lazy">
+            <div class="category-caption"><h3>BASKETBALL</h3><span>Custom Basketball Jerseys and Team Uniforms.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Cricket.png" alt="Cricket uniforms" loading="lazy">
+            <div class="category-caption"><h3>CRICKET</h3><span>Custom Cricket Jerseys, Club Kits and Teamwear.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Training">
+            <img src="Training.png" alt="Training sportswear" loading="lazy">
+            <div class="category-caption"><h3>TRAINING WEAR</h3><span>High-Performance Apparel for Every Training Session.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Casual.png" alt="Casual Sportswear" loading="lazy">
+            <div class="category-caption"><h3>Casual Sportswear</h3><span>Stylish Everyday Sportswear for Active Lifestyles.</span></div>
+          </a>
+           <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Compression.png" alt="Compression Wear" loading="lazy">
+            <div class="category-caption"><h3>Compression Wear</h3><span>High-Performance Compression Gear for Athletes.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Corporate & Business Uniforms.png" alt="Corporate & Business Uniforms" loading="lazy">
+            <div class="category-caption"><h3>Corporate & Business Uniforms</h3><span>Professional Uniforms for Modern Business Teams.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Cycling Wear.png" alt="Cycling Wear" loading="lazy">
+            <div class="category-caption"><h3>Cycling Wear</h3><span>Performance Cycling Apparel for Every Ride.</span></div>
+          </a>
+           <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Gym & Fitness Wear.png" alt="Gym & Fitness Wear" loading="lazy">
+            <div class="category-caption"><h3>Gym & Fitness Wear</h3><span>Premium Gym Apparel for Every Workout.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Martial Arts & Combat Sports.png" alt="Martial Arts & Combat Sports" loading="lazy">
+            <div class="category-caption"><h3>Martial Arts & Combat Sports</h3><span>Premium Combat Gear for Every Fighter.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="Running & Athletics.png" alt="Running & Athletics" loading="lazy">
+            <div class="category-caption"><h3>Running & Athletics</h3><span>Lightweight Athletic Wear for Every Runner.</span></div>
+          </a>
+          <a class="category-card" href="#products" data-category-link="Cricket">
+            <img src="School & College Sportswear.png" alt="School & College Sportswear" loading="lazy">
+            <div class="category-caption"><h3>School & College Sportswear</h3><span>Durable Sportswear for Future Champions.</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= WHY ZEE SPORTS ========================= -->
+    <section class="section section-dark" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHY ZEE SPORTS</p>
+          <h2>MADE AROUND YOUR IDENTITY</h2>
+          <p>Flexible apparel development for your product and team requirements.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon">✳</span><h3>CUSTOM MANUFACTURING</h3><p>Products developed around your design, artwork and requirements.</p></article>
+          <article class="feature-card"><span class="feature-icon">◇</span><h3>PRIVATE LABEL</h3><p>Discuss branded apparel collections for your own sportswear label.</p></article>
+          <article class="feature-card"><span class="feature-icon">✎</span><h3>PERSONALIZED DESIGNS</h3><p>Coordinate colours, logos, names and numbers with your design direction.</p></article>
+          <article class="feature-card"><span class="feature-icon">✓</span><h3>QUALITY INSPECTION</h3><p>Product checks are included in the production workflow.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= PRODUCTS ========================= -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-heading section-heading-row">
+          <div><p class="eyebrow">MADE TO YOUR BRIEF</p><h2>FEATURED PRODUCTS</h2><p>Choose products and add them to your WhatsApp inquiry.</p></div>
+          <div class="product-search"><input id="productSearch" type="search" placeholder="Search products..." aria-label="Search products"></div>
+        </div>
+        <div class="filter-row">
+          <button class="filter-button active" data-filter="All">ALL</button>
+          <button class="filter-button" data-filter="Football">FOOTBALL</button>
+          <button class="filter-button" data-filter="Basketball">BASKETBALL</button>
+          <button class="filter-button" data-filter="Cricket">CRICKET</button>
+          <button class="filter-button" data-filter="Training">TRAINING</button>
+        </div>
+        <!-- Product cards are generated from the PRODUCTS array in script.js.
+             To change product name/photo/description, edit that array. -->
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========================= MANUFACTURING PROCESS ========================= -->
+    <section class="section section-dark" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FROM CONCEPT TO COMPLETION</p>
+          <h2>OUR MANUFACTURING PROCESS</h2>
+          <p>Order requirements and specifications are confirmed before production.</p>
+        </div>
+        <div class="process-grid">
+          <article><b>01</b><h3>DESIGN & CUSTOMIZATION ✅</h3><p>Review your artwork, logos and product requirements.</p></article>
+          <article><b>02</b><h3>FABRIC SELECTION ✅</h3><p>Discuss suitable material options for the product.</p></article>
+          <article><b>03</b><h3>CUTTING & PRINTING ✅</h3><p>Prepare panels and apply the approved graphics.</p></article>
+          <article><b>04</b><h3>STITCHING ✅</h3><p>Assemble apparel according to the confirmed design.</p></article>
+          <article><b>05</b><h3>QUALITY CHECK ✅</h3><p>Inspect finished items against agreed requirements.</p></article>
+          <article><b>06</b><h3>PACKAGING ✅</h3><p>Prepare completed orders for dispatch.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= PRIVATE LABEL CTA ========================= -->
+    <section class="brand-cta">
+      <div class="container">
+        <p class="eyebrow">FOR SPORTS BRAND OWNERS</p>
+        <h2>BUILD YOUR OWN SPORTSWEAR BRAND WITH ZEE SPORTS.</h2>
+        <p>Discuss private-label manufacturing, customized designs and wholesale partnerships.</p>
+        <a class="btn btn-white" href="#contact">START YOUR PARTNERSHIP</a>
+      </div>
+    </section>
+
+    <!-- ========================= CONTACT ========================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>LET'S BUILD YOUR SPORTS BRAND TOGETHER.</h2>
+          <p>Contact our team directly. No contact form and no unnecessary steps.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card"><span>✉</span><h3>EMAIL</h3><a href="mailto:zeesports2026@gmail.com">zeesports2026@gmail.com</a></article>
+          <article class="contact-card"><span>◉</span><h3>WHATSAPP / PHONE</h3><a href="https://wa.me/923184040139" target="_blank" rel="noopener">+92 318 4040139</a></article>
+          <article class="contact-card"><span>⌖</span><h3>LOCATION</h3><a href="https://share.google/qDdHijY5WI9FrGh8I" target="_blank" rel="noopener">Paki Kotli Sialkot 51310, Punjab, Pakistan</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= FOOTER ========================= -->
+
+   <div class="toast" id="toast" role="status"></div>
+  <div class="footer-social">
+    <h3>Follow Us</h3>
+
+    <div class="social-links">
+        <a href="https://facebook.com/zeesports2026"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://instagram.com/zeesports2026"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://linkedin.com/company/zeesportsinc"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://youtube.com/@zeesports2026"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://tiktok.com/@zeesports2026"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+</div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div><h2>ZEE <span>SPORTS</span></h2><p>Custom Sportswear & Team Uniform Manufacturer</p></div>
+      <div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#products">Products</a><a href="#contact">Contact</a></div>
+      <p class="copyright">© <span id="year"></span> Zee Sports. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========================= INQUIRY CART DRAWER ========================= -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Product inquiry cart">
+    <div class="cart-header"><h2>YOUR INQUIRY</h2><button id="closeCart" aria-label="Close cart">✕</button></div>
+    <p class="cart-help">Your selected products will be included in a WhatsApp message.</p>
+    <div id="cartItems"></div>
+    <button class="btn btn-red full-width" id="sendWhatsApp">SEND INQUIRY ON WHATSAPP</button>
+  </aside>
+
+
+  <!-- Main JavaScript: keep script.js in the same folder as index.html. -->
+  <script src="script.js"></script>
+</body>
+</html>
